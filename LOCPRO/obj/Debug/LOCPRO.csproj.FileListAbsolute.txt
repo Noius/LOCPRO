@@ -1,1 +1,9 @@
 G:\PPE2\LOCPRO\LOCPRO\bin\Debug\LOCPRO.exe.config
+G:\PPE2\LOCPRO\LOCPRO\bin\Debug\LOCPRO.exe
+G:\PPE2\LOCPRO\LOCPRO\bin\Debug\LOCPRO.pdb
+G:\PPE2\LOCPRO\LOCPRO\obj\Debug\LOCPRO.csprojResolveAssemblyReference.cache
+G:\PPE2\LOCPRO\LOCPRO\obj\Debug\LOCPRO.Form1.resources
+G:\PPE2\LOCPRO\LOCPRO\obj\Debug\LOCPRO.Properties.Resources.resources
+G:\PPE2\LOCPRO\LOCPRO\obj\Debug\LOCPRO.csproj.GenerateResource.Cache
+G:\PPE2\LOCPRO\LOCPRO\obj\Debug\LOCPRO.exe
+G:\PPE2\LOCPRO\LOCPRO\obj\Debug\LOCPRO.pdb
