@@ -15,6 +15,8 @@ namespace LOCPRO
         private bool connopen = false;
         private bool errgrave = false;
         private bool chargement = false;
+        private MySqlDataAdapter dA1 = new MySqlDataAdapter();
+        private DataTable dT1 = new DataTable();
         public Modele()
         {
         }
@@ -33,6 +35,11 @@ namespace LOCPRO
             get { return chargement; }
             set { chargement = value; }
         }
+        public DataTable DT1
+        {
+            get { return dT1; }
+            set { dT1 = value; }
+        }
         public void seconnecter()
         {
 
@@ -41,8 +48,9 @@ namespace LOCPRO
             try // tentative
             {
                 myConnection.Open();
-                MessageBox.Show("Connection réussie");
+                MessageBox.Show("Connexion réussie");
                 connopen = true;
+                
             }
             catch (Exception err)// gestion des erreurs
             {
@@ -50,6 +58,7 @@ namespace LOCPRO
                 MessageBoxIcon.Error);
                 connopen = false; errgrave = true;
             }
+
         }
         public void sedeconnecter()
         {
@@ -66,6 +75,27 @@ namespace LOCPRO
                 MessageBox.Show("Erreur fermeture bdd : " + err, "PBS deconnection", MessageBoxButtons.OK,
                 MessageBoxIcon.Error);
                 errgrave = true;
+            }
+        }
+        public DataTable requete(string larequete)
+        {
+            
+            dA1.SelectCommand = new MySqlCommand(larequete, myConnection);
+            // pour spécifier les instructions de mise à jour (insert, delete, update)
+            MySqlCommandBuilder CB1 = new MySqlCommandBuilder(dA1);
+            try
+            {
+                dT1.Clear();
+                dA1.Fill(dT1);
+                chargement = true;
+                return dT1; 
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Erreur chargement dataTable: " + err, "PBS table",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                errgrave = true;
+                return dT1;
             }
         }
     }
