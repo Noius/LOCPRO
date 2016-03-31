@@ -21,6 +21,7 @@ namespace LOCPRO
         private string a="";
         private List<string> listid=new List<string>();
         private List<string> listmdp=new List<string>();
+        public int index;
  
         public Form1()
         {
@@ -37,10 +38,14 @@ namespace LOCPRO
             if (verfiertech() == true)
             {
                 MessageBox.Show("Vous avez réussi à vous connecter");
+                Form2 bli = new Form2();
+                this.Hide();
+                bli.Show();
+
             }
             else
             {
-                MessageBox.Show(""+listid[1]+" "+listmdp[1]);
+                MessageBox.Show("Mauvais identifiant ou mot de passe","Erreur");
             }
           
 
@@ -93,10 +98,11 @@ namespace LOCPRO
         private bool verfiertech(){
             int i=0;
             bool oui = false;
-            while(i<=0 || oui==true) {
+            while(i<listmdp.Count && oui==false) {
                 if (listid[i]==textBox1.Text && listmdp[i]==textBox2.Text)
                 {
                     oui=true;
+                    index = i;
                 }
                 i = i + 1;                 
             }

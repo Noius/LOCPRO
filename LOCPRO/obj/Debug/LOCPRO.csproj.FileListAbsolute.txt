@@ -7,3 +7,4 @@ G:\PPE2\LOCPRO\LOCPRO\obj\Debug\LOCPRO.Properties.Resources.resources
 G:\PPE2\LOCPRO\LOCPRO\obj\Debug\LOCPRO.csproj.GenerateResource.Cache
 G:\PPE2\LOCPRO\LOCPRO\obj\Debug\LOCPRO.exe
 G:\PPE2\LOCPRO\LOCPRO\obj\Debug\LOCPRO.pdb
+G:\PPE2\LOCPRO\LOCPRO\obj\Debug\LOCPRO.Form2.resources
