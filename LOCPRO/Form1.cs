@@ -12,7 +12,7 @@ namespace LOCPRO
 {
    
         
-
+   
     public partial class Form1 : Form
     {
         MdiClient ctlMDI;

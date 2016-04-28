@@ -6,6 +6,7 @@ using System.Windows.Forms;
 
 namespace LOCPRO
 {
+    
     static class Program
     {
         /// <summary>

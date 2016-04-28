@@ -40,10 +40,11 @@ namespace LOCPRO
             get { return dT1; }
             set { dT1 = value; }
         }
+ 
         public void seconnecter()
         {
 
-            string myConnectionString = "Database=bdd_loc;Data Source=localhost;User Id=root;";
+            string myConnectionString = "Database=mlr1;Data Source=localhost;User Id=root;";
             myConnection = new MySqlConnection(myConnectionString);
             try // tentative
             {
@@ -98,5 +99,10 @@ namespace LOCPRO
                 return dT1;
             }
         }
+
+
+
+
+
     }
 }
